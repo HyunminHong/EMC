@@ -533,7 +533,7 @@ EMC.default = function(data, h=NULL, eps=1.0e-8, max.iterations=100, n0= NULL, r
 	result$vis.data = vis_data$data
 	result$vis.modes = vis_data$modes
 
-	result$SC.plot = sort(table(factor(cluster_lab)),decreasing=T)
+	result$SC.plot = sort(as.numeric(table(factor(cluster_lab))),decreasing=T)
 	result$size.threshold = n0
 	result$bandwidth = h
 	result$rho = vis_data$rho
